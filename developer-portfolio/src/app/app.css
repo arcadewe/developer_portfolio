@@ -1,0 +1,6 @@
+.level-image {
+  height: 100vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
