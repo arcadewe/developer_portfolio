@@ -1,0 +1,10 @@
+.project-card { background: #fff; border: 3px solid #171717; box-shadow: 6px 6px 0 #171717; display: grid; gap: 1rem; grid-template-columns: 4rem 1fr; padding: 1.15rem; }
+.project-icon { align-items: center; background: #f7b32b; border: 2px solid #171717; display: flex; height: 4rem; justify-content: center; width: 4rem; }
+.project-icon img { image-rendering: pixelated; max-height: 2.7rem; max-width: 2.7rem; object-fit: contain; }
+.project-copy h3, .project-copy p { margin: 0; }
+.project-label { color: #d94a3a; font: 0.6rem 'Press Start 2P', monospace; margin-bottom: 0.65rem !important; }
+.project-copy h3 { font-size: 1.15rem; margin-bottom: 0.55rem; }
+.project-copy > p:not(.project-label) { color: #4b4b4b; line-height: 1.45; }
+.project-meta { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.85rem; }
+.project-meta span { background: #d6f04b; border: 1px solid #171717; font-size: 0.78rem; padding: 0.25rem 0.45rem; }
+.project-link { grid-column: 2; font-weight: 700; }

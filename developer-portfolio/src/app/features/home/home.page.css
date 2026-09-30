@@ -1,0 +1,22 @@
+:host { display: block; }
+
+.world {
+  background: #5f91ed;
+  color: #050505;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.navigation { left: 8.5%; position: absolute; right: 8.5%; top: 3.8rem; z-index: 5; }
+.navigation a { border: 0; box-shadow: none; font: 1.75rem 'Space Grotesk', sans-serif; padding: 1rem 2.2rem; }
+.navigation a:hover, .navigation a:focus-visible { box-shadow: none; transform: none; }
+.player { position: absolute; transform: translateX(-50%); transition: left 130ms linear; z-index: 3; }
+.player img { height: 4.8rem; image-rendering: pixelated; object-fit: contain; width: 3.2rem; }
+.floor { bottom: 0; display: grid; grid-auto-rows: 32px; grid-template-columns: repeat(auto-fill, 32px); height: 96px; left: 0; overflow: hidden; position: absolute; right: 0; }
+.floor img { display: block; height: 32px; image-rendering: pixelated; width: 32px; }
+
+@media (max-width: 800px) {
+  .navigation { left: 1rem; right: 1rem; top: 1.2rem; }
+  .navigation a { font-size: 0.75rem; padding: 0.6rem 0.35rem; }
+}

@@ -1,0 +1,13 @@
+<main class="world" aria-label="World 1-1 developer portfolio landing page">
+  <app-navigation />
+
+  <div class="player" [style.left.%]="playerPosition()" [style.bottom.px]="groundOffsetPx + verticalOffsetPosition()" role="img" aria-label="Moving player character using sprite-38-12">
+    <img [src]="playerSpritePath" alt="" />
+  </div>
+
+  <div class="floor" aria-hidden="true">
+    @for (tile of floorTiles; track tile) {
+      <img [src]="floorSpritePath" alt="" />
+    }
+  </div>
+</main>

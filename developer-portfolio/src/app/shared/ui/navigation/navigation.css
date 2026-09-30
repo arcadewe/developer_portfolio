@@ -1,0 +1,7 @@
+.navigation { display: flex; gap: 10%; justify-content: space-between; width: 100%; }
+.navigation a { background: #fff; color: #050505; font: 1.75rem 'Space Grotesk', sans-serif; padding: 1rem 2.2rem; text-decoration: none; }
+.navigation a:hover, .navigation a:focus-visible { outline: 3px solid #050505; outline-offset: 3px; }
+@media (max-width: 800px) {
+	.navigation { gap: 0.25rem; }
+	.navigation a { font-size: 0.75rem; padding: 0.6rem 0.35rem; }
+}

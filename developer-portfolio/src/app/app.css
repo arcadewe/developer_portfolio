@@ -1,6 +1,4 @@
-.level-image {
-  height: 100vh;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
+:host {
+  display: block;
+  min-height: 100vh;
 }
