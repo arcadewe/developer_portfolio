@@ -1,0 +1,10 @@
+.volume-control { align-items: center; background: rgba(0, 0, 0, 0.3); border: 2px solid var(--color-overlay-border); display: flex; gap: 0.6rem; left: 1rem; padding: 0.45rem 0.7rem; position: absolute; top: 1rem; z-index: 7; }
+.volume-text { color: var(--color-white); font: 0.6rem var(--font-pixel); text-shadow: 2px 2px 0 var(--color-ink); text-transform: uppercase; }
+.volume-value { min-width: 2.2rem; text-align: right; }
+.volume-control input { accent-color: var(--color-gold); cursor: pointer; width: 7rem; }
+.volume-control input:focus-visible { outline: var(--focus-ring); outline-offset: 3px; }
+
+@media (max-width: 800px) {
+  .volume-control { gap: 0.4rem; height: 2.75rem; left: 4.25rem; padding: 0.35rem 0.5rem; top: 0.75rem; }
+  .volume-control input { width: 5rem; }
+}

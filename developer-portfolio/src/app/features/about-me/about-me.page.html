@@ -1,21 +1,17 @@
 <app-page-shell titleKey="nav.aboutMe">
-  <div class="about-card">
+  <app-pixel-card class="about-card">
     <p>{{ 'aboutMe.intro' | translate }}</p>
     <p>{{ 'aboutMe.body' | translate }}</p>
-  </div>
+  </app-pixel-card>
 
-  <h2 class="skills-title">{{ 'aboutMe.skillsTitle' | translate }}</h2>
+  <h2 class="skills-title pixel-heading">{{ 'aboutMe.skillsTitle' | translate }}</h2>
 
   <div class="skill-groups">
-    @for (group of skillGroups; track group.titleKey) {
-      <div class="skill-group">
-        <h3>{{ group.titleKey | translate }}</h3>
-        <ul>
-          @for (skill of group.skills; track skill) {
-            <li>{{ skill }}</li>
-          }
-        </ul>
-      </div>
+    @for (group of portfolio.skillGroups; track group.titleKey) {
+      <app-pixel-card tone="brick">
+        <h3 class="skill-group-title">{{ group.titleKey | translate }}</h3>
+        <app-tag-list [tags]="group.skills" />
+      </app-pixel-card>
     }
   </div>
 </app-page-shell>

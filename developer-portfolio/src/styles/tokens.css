@@ -1,0 +1,25 @@
+:root {
+  --color-sky: #5f91ed;
+  --color-ink: #050505;
+  --color-paper: #fff8e7;
+  --color-white: #fff;
+  --color-brick: #c84c0c;
+  --color-brick-hover: #e45c10;
+  --color-gold: #fcd34d;
+  --color-linkedin: #0a66c2;
+  --color-linkedin-hover: #004182;
+  --color-overlay: rgba(0, 0, 0, 0.35);
+  --color-overlay-strong: rgba(0, 0, 0, 0.55);
+  --color-overlay-border: rgba(255, 255, 255, 0.5);
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-body: 'Space Grotesk', sans-serif;
+  --border-pixel: 4px solid var(--color-ink);
+  --border-pixel-thin: 3px solid var(--color-ink);
+  --shadow-block: 6px 6px 0 rgba(5, 5, 5, 0.35);
+  --shadow-block-sm: 3px 3px 0 rgba(5, 5, 5, 0.35);
+  --text-outline-sm: 2px 0 var(--color-ink), -2px 0 var(--color-ink), 0 2px var(--color-ink), 0 -2px var(--color-ink), 2px 2px var(--color-ink), -2px 2px var(--color-ink), 2px -2px var(--color-ink), -2px -2px var(--color-ink);
+  --text-outline-lg: 3px 0 var(--color-ink), -3px 0 var(--color-ink), 0 3px var(--color-ink), 0 -3px var(--color-ink), 3px 3px var(--color-ink), -3px 3px var(--color-ink), 3px -3px var(--color-ink), -3px -3px var(--color-ink), 5px 5px 0 rgba(5, 5, 5, 0.35);
+  --focus-ring: 3px solid var(--color-gold);
+  --step-transition: 120ms steps(2);
+  --floor-sprite: url('/assets/images/sprites/sprite-9-11.png');
+}

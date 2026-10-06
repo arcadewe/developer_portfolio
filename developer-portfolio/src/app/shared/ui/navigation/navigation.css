@@ -1,9 +1,0 @@
-.navigation { position: absolute; right: 1rem; top: 1rem; z-index: 7; }
-.language-switch { align-items: center; display: flex; gap: 0.5rem; }
-.language-switch button { background: none; border: 0; color: #050505; cursor: pointer; font: 1.1rem 'Space Grotesk', sans-serif; padding: 0.4rem 0.6rem; }
-.language-switch button.active { font-weight: 700; text-decoration: underline; }
-.language-switch button:hover, .language-switch button:focus-visible { outline: 3px solid #050505; outline-offset: 3px; }
-
-@media (max-width: 800px) {
-  .language-switch button { font-size: 0.85rem; padding: 0.4rem 0.4rem; }
-}

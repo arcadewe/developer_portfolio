@@ -1,8 +1,8 @@
 :host { display: block; }
 
 .world {
-  background: #5f91ed;
-  color: #050505;
+  background: var(--color-sky);
+  color: var(--color-ink);
   min-height: 100vh;
   min-height: 100dvh;
   overflow: hidden;
@@ -16,8 +16,8 @@
 
 .clouds { left: 0; position: absolute; right: 0; top: 6.5rem; z-index: 1; }
 .cloud-group { align-items: center; display: flex; flex-direction: column; position: absolute; transform: translateX(-50%); }
-.cloud-link { color: #fff; font: 1.1rem 'Press Start 2P', monospace; letter-spacing: 0.05em; margin-bottom: 0.35rem; padding: 0.4rem 0.5rem; text-decoration: none; text-shadow: 3px 0 #050505, -3px 0 #050505, 0 3px #050505, 0 -3px #050505, 3px 3px #050505, -3px 3px #050505, 3px -3px #050505, -3px -3px #050505, 5px 5px 0 rgba(5, 5, 5, 0.35); text-transform: uppercase; transition: transform 120ms steps(2); white-space: nowrap; }
-.cloud-link:hover, .cloud-link:focus-visible { color: #fcd34d; outline: none; transform: translateY(-4px); }
+.cloud-link { color: var(--color-white); font: 1.1rem var(--font-pixel); letter-spacing: 0.05em; margin-bottom: 0.35rem; padding: 0.4rem 0.5rem; text-decoration: none; text-shadow: var(--text-outline-lg); text-transform: uppercase; transition: transform var(--step-transition); white-space: nowrap; }
+.cloud-link:hover, .cloud-link:focus-visible { color: var(--color-gold); outline: none; transform: translateY(-4px); }
 .cloud-link:focus-visible { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; }
 .cloud-row { display: flex; }
 .cloud { display: block; height: 32px; image-rendering: pixelated; width: 32px; }
@@ -41,26 +41,9 @@
 .floor { bottom: 0; display: grid; grid-auto-rows: 32px; grid-template-columns: repeat(auto-fill, 32px); height: 96px; left: 0; overflow: hidden; position: absolute; right: 0; }
 .floor img { display: block; height: 32px; image-rendering: pixelated; width: 32px; }
 
-.volume-control { align-items: center; background: rgba(0, 0, 0, 0.3); border: 2px solid rgba(255, 255, 255, 0.5); display: flex; gap: 0.6rem; left: 1rem; padding: 0.45rem 0.7rem; position: absolute; top: 1rem; z-index: 7; }
-.volume-label, .volume-value { color: #fff; font: 0.6rem 'Press Start 2P', monospace; text-shadow: 2px 2px 0 #050505; text-transform: uppercase; }
-.volume-value { min-width: 2.2rem; text-align: right; }
-.volume-control input { accent-color: #fcd34d; cursor: pointer; width: 7rem; }
-.volume-control input:focus-visible { outline: 3px solid #fcd34d; outline-offset: 3px; }
-
-.controls { bottom: 1rem; display: none; justify-content: space-between; left: 1rem; pointer-events: none; position: fixed; right: 1rem; z-index: 6; }
-.controls-move { display: flex; gap: 0.75rem; }
-.control { align-items: center; background: rgba(0, 0, 0, 0.35); border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 50%; color: rgba(255, 255, 255, 0.85); display: flex; font-size: 1rem; height: 3.25rem; justify-content: center; padding: 0; pointer-events: auto; touch-action: none; user-select: none; -webkit-tap-highlight-color: transparent; width: 3.25rem; }
-.control:active { background: rgba(0, 0, 0, 0.55); }
-
-@media (hover: none) and (pointer: coarse), (max-width: 800px) {
-  .controls { display: flex; }
-}
-
 @media (max-width: 800px) {
   .viewport { overflow: hidden; }
   .stage-frame { min-width: 0; }
   .stage { height: 640px; left: 0; position: absolute; top: 0; transform-origin: 0 0; width: 1024px; }
-  .volume-control { gap: 0.4rem; left: 4.25rem; padding: 0.35rem 0.5rem; top: 0.75rem; height: 2.75rem; }
-  .volume-control input { width: 5rem; }
   .cloud-link { display: none; }
 }

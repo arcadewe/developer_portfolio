@@ -1,0 +1,8 @@
+{
+  "navigation": [
+    { "labelKey": "nav.aboutMe", "path": "/about-me" },
+    { "labelKey": "nav.experience", "path": "/experience" },
+    { "labelKey": "nav.github", "social": "github" },
+    { "labelKey": "nav.courses", "path": "/courses" }
+  ]
+}

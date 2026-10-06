@@ -1,0 +1,10 @@
+<div class="controls" aria-label="On-screen controls">
+  <div class="controls-group">
+    <button type="button" class="control" aria-label="Move left" (pointerdown)="start('left', $event)" (pointerup)="moveEnd.emit('left')" (pointercancel)="moveEnd.emit('left')" (pointerleave)="moveEnd.emit('left')" (contextmenu)="$event.preventDefault()">&#9664;</button>
+    <button type="button" class="control" aria-label="Move right" (pointerdown)="start('right', $event)" (pointerup)="moveEnd.emit('right')" (pointercancel)="moveEnd.emit('right')" (pointerleave)="moveEnd.emit('right')" (contextmenu)="$event.preventDefault()">&#9654;</button>
+  </div>
+  <div class="controls-group">
+    <button type="button" class="control" aria-label="Enter pipe" (pointerdown)="press('enter', $event)" (contextmenu)="$event.preventDefault()">&#9660;</button>
+    <button type="button" class="control" aria-label="Jump" (pointerdown)="press('jump', $event)" (contextmenu)="$event.preventDefault()">&#9650;</button>
+  </div>
+</div>

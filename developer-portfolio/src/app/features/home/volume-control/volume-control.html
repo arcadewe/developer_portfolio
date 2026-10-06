@@ -1,0 +1,5 @@
+<label class="volume-control">
+  <span class="volume-text">{{ 'audio.volume' | translate }}</span>
+  <input type="range" min="0" max="100" step="1" [value]="percent()" (input)="onInput($event)" [attr.aria-valuetext]="percent() + '%'" />
+  <span class="volume-text volume-value" aria-hidden="true">{{ percent() }}</span>
+</label>

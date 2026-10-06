@@ -1,24 +1,18 @@
 <main class="world" aria-label="World 1-1 developer portfolio landing page">
-  <app-navigation />
-
-  <app-mobile-menu [clouds]="clouds" />
-
-  <label class="volume-control">
-    <span class="volume-label">{{ 'audio.volume' | translate }}</span>
-    <input type="range" min="0" max="100" step="1" [value]="volumePercent()" (input)="onVolumeInput($event)" [attr.aria-valuetext]="volumePercent() + '%'" />
-    <span class="volume-value" aria-hidden="true">{{ volumePercent() }}</span>
-  </label>
+  <app-header />
+  <app-mobile-menu />
+  <app-volume-control [percent]="volumePercent()" (percentChange)="onVolumeChange($event)" />
 
   <div class="viewport" #viewport>
     <div class="stage-frame" [style.width.px]="compactFrame()?.width" [style.height.px]="compactFrame()?.height">
       <div class="stage" #stage [style.transform]="compactScale() ? 'scale(' + compactScale() + ')' : null">
         <div class="clouds">
-          @for (cloud of clouds; track cloud.labelKey) {
+          @for (cloud of clouds; track cloud.link.labelKey) {
             <div class="cloud-group" [style.left.%]="cloud.leftPercent" [style.top.px]="cloud.topPx">
-              @if (cloud.href.startsWith('/')) {
-                <a class="cloud-link" [routerLink]="cloud.href">{{ cloud.labelKey | translate }}</a>
+              @if (cloud.link.external) {
+                <a class="cloud-link" [href]="cloud.link.href" target="_blank" rel="noopener noreferrer">{{ cloud.link.labelKey | translate }}</a>
               } @else {
-                <a class="cloud-link" [attr.href]="cloud.href || '#'" target="_blank" rel="noopener noreferrer">{{ cloud.labelKey | translate }}</a>
+                <a class="cloud-link" [routerLink]="cloud.link.href">{{ cloud.link.labelKey | translate }}</a>
               }
               <div class="cloud-row" #cloudRow aria-hidden="true">
                 @for (tile of cloudTiles; track tile) {
@@ -75,14 +69,5 @@
   <audio class="sfx" #blockHitSound [src]="audioFiles.blockHit" preload="auto"></audio>
   <audio class="sfx" #coinSound [src]="audioFiles.coin" preload="auto"></audio>
   <audio class="sfx" #pipeSound [src]="audioFiles.pipe" preload="auto"></audio>
-  <div class="controls" aria-label="On-screen controls">
-    <div class="controls-move">
-      <button type="button" class="control" aria-label="Move left" (pointerdown)="pressControl('ArrowLeft', $event)" (pointerup)="releaseControl('ArrowLeft')" (pointercancel)="releaseControl('ArrowLeft')" (pointerleave)="releaseControl('ArrowLeft')" (contextmenu)="$event.preventDefault()">&#9664;</button>
-      <button type="button" class="control" aria-label="Move right" (pointerdown)="pressControl('ArrowRight', $event)" (pointerup)="releaseControl('ArrowRight')" (pointercancel)="releaseControl('ArrowRight')" (pointerleave)="releaseControl('ArrowRight')" (contextmenu)="$event.preventDefault()">&#9654;</button>
-    </div>
-    <div class="controls-move">
-      <button type="button" class="control" aria-label="Enter pipe" (pointerdown)="downControl($event)" (contextmenu)="$event.preventDefault()">&#9660;</button>
-      <button type="button" class="control" aria-label="Jump" (pointerdown)="jumpControl($event)" (contextmenu)="$event.preventDefault()">&#9650;</button>
-    </div>
-  </div>
+  <app-touch-controls (moveStart)="onMoveStart($event)" (moveEnd)="onMoveEnd($event)" (jump)="onJump()" (enter)="enterPipe()" />
 </main>

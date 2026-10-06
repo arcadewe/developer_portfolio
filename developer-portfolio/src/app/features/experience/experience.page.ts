@@ -1,21 +1,16 @@
 import { Component, inject } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { ExperienceItem } from '../../domain/portfolio-content';
-import { PageShell } from '../../shared/ui/page-shell/page-shell';
+import { TranslatePipe } from '@ngx-translate/core';
+import { PortfolioFacade } from '../../core/portfolio.facade';
+import { PageShell } from '../../layout/page-shell/page-shell';
+import { PixelCard } from '../../shared/ui/pixel-card/pixel-card';
+import { TagList } from '../../shared/ui/tag-list/tag-list';
 
 @Component({
   selector: 'app-experience-page',
-  standalone: true,
-  imports: [PageShell, TranslatePipe],
+  imports: [PageShell, PixelCard, TagList, TranslatePipe],
   templateUrl: './experience.page.html',
   styleUrl: './experience.page.css',
 })
 export class ExperiencePage {
-  private readonly translate = inject(TranslateService);
-  protected readonly items = toSignal(this.translate.stream('experience.items'), { initialValue: [] as readonly ExperienceItem[] });
-
-  protected asItems(value: unknown): readonly ExperienceItem[] {
-    return Array.isArray(value) ? value : [];
-  }
+  protected readonly portfolio = inject(PortfolioFacade);
 }

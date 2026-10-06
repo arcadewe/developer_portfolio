@@ -1,0 +1,8 @@
+.language-switch { align-items: center; display: flex; gap: 0.5rem; }
+.language-switch button { background: none; border: 0; color: var(--color-ink); cursor: pointer; font: 1.1rem var(--font-body); padding: 0.4rem 0.6rem; }
+.language-switch button.active { font-weight: 700; text-decoration: underline; }
+.language-switch button:hover, .language-switch button:focus-visible { outline: 3px solid var(--color-ink); outline-offset: 3px; }
+
+@media (max-width: 800px) {
+  .language-switch button { font-size: 0.85rem; padding: 0.4rem; }
+}

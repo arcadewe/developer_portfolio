@@ -1,0 +1,5 @@
+<div class="language-switch" role="group" aria-label="Language">
+  @for (locale of language.locales; track locale) {
+    <button type="button" [class.active]="language.locale() === locale" (click)="language.use(locale)">{{ 'language.' + locale | translate }}</button>
+  }
+</div>

@@ -1,0 +1,19 @@
+<div class="mobile-nav">
+  <button type="button" class="burger" [class.open]="menuOpen()" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-controls="mobile-menu" [attr.aria-label]="'menu.toggle' | translate">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  @if (menuOpen()) {
+    <nav id="mobile-menu" class="mobile-menu" [attr.aria-label]="'menu.label' | translate">
+      @for (link of portfolio.navigation; track link.labelKey) {
+        @if (link.external) {
+          <a [href]="link.href" target="_blank" rel="noopener noreferrer" (click)="closeMenu()">{{ link.labelKey | translate }}</a>
+        } @else {
+          <a [routerLink]="link.href" (click)="closeMenu()">{{ link.labelKey | translate }}</a>
+        }
+      }
+    </nav>
+  }
+</div>

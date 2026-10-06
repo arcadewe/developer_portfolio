@@ -1,20 +1,17 @@
 .timeline { display: grid; gap: 2rem; list-style: none; margin: 0; padding: 0 0 0 1.5rem; position: relative; }
-.timeline::before { background: repeating-linear-gradient(#050505 0 12px, transparent 12px 20px); bottom: 0; content: ''; left: 0.35rem; position: absolute; top: 0; width: 4px; }
-.level-card { background: #fff8e7; border: 4px solid #050505; box-shadow: 6px 6px 0 rgba(5, 5, 5, 0.35); padding: 1.25rem 1.5rem; position: relative; }
-.level-card::before { background: #fcd34d; border: 3px solid #050505; content: ''; height: 14px; left: -2.15rem; position: absolute; top: 1.4rem; width: 14px; }
-.level-tag { background: #c84c0c; border: 3px solid #050505; color: #fcd34d; display: inline-block; font: 0.6rem 'Press Start 2P', monospace; margin-bottom: 0.9rem; padding: 0.35rem 0.5rem; text-shadow: 1px 1px 0 #050505; text-transform: uppercase; }
+.timeline::before { background: repeating-linear-gradient(var(--color-ink) 0 12px, transparent 12px 20px); bottom: 0; content: ''; left: 0.35rem; position: absolute; top: 0; width: 4px; }
+.timeline-item { position: relative; }
+.timeline-item::before { background: var(--color-gold); border: var(--border-pixel-thin); content: ''; height: 14px; left: -1.65rem; position: absolute; top: 1.6rem; width: 14px; z-index: 1; }
+.level-tag { background: var(--color-brick); border: var(--border-pixel-thin); color: var(--color-gold); display: inline-block; font: 0.6rem var(--font-pixel); margin-bottom: 0.9rem; padding: 0.35rem 0.5rem; text-shadow: 1px 1px 0 var(--color-ink); text-transform: uppercase; }
 .level-heading { align-items: baseline; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: space-between; }
-.level-heading h2 { font: 0.95rem/1.5 'Press Start 2P', monospace; margin: 0; }
-.period { font: 600 0.95rem 'Space Grotesk', sans-serif; opacity: 0.75; }
-.company { font: 600 1.05rem 'Space Grotesk', sans-serif; margin: 0.35rem 0 0.9rem; }
-.highlights { font: 1rem/1.6 'Space Grotesk', sans-serif; margin: 0 0 1rem; padding-left: 1.2rem; }
+.level-heading h2 { font: 0.95rem/1.5 var(--font-pixel); margin: 0; }
+.period { font: 600 0.95rem var(--font-body); opacity: 0.75; }
+.company { font: 600 1.05rem var(--font-body); margin: 0.35rem 0 0.9rem; }
+.highlights { font: 1rem/1.6 var(--font-body); margin: 0 0 1rem; padding-left: 1.2rem; }
 .highlights li { margin-bottom: 0.35rem; }
-.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
-.tags li { background: #5f91ed; border: 3px solid #050505; color: #fff; font: 600 0.85rem 'Space Grotesk', sans-serif; padding: 0.2rem 0.55rem; text-shadow: 1px 1px 0 #050505; }
 
 @media (max-width: 600px) {
   .timeline { padding-left: 1.1rem; }
-  .level-card { padding: 1rem; }
-  .level-card::before { left: -1.7rem; }
+  .timeline-item::before { left: -1.25rem; }
   .level-heading h2 { font-size: 0.8rem; }
 }

@@ -1,0 +1,6 @@
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
+.tags li { border: var(--border-pixel-thin); font: 600 0.9rem var(--font-body); padding: 0.25rem 0.55rem; }
+.tone-paper li { background: var(--color-paper); }
+.tone-sky li, .tone-brick li { color: var(--color-white); text-shadow: 1px 1px 0 var(--color-ink); }
+.tone-sky li { background: var(--color-sky); }
+.tone-brick li { background: var(--color-brick); }

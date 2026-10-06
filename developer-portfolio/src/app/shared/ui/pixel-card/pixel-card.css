@@ -1,0 +1,7 @@
+:host { border: var(--border-pixel); box-shadow: var(--shadow-block); display: block; padding: 1.25rem 1.5rem; position: relative; }
+:host(.tone-paper) { background: var(--color-paper); }
+:host(.tone-brick) { background: var(--color-brick); padding: 1rem; }
+
+@media (max-width: 600px) {
+  :host { padding: 1rem; }
+}

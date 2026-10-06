@@ -1,0 +1,14 @@
+:root {
+  background: var(--color-sky);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+a { color: inherit; }
+
+.pixel-heading { color: var(--color-white); font-family: var(--font-pixel); text-shadow: var(--text-outline-sm); text-transform: uppercase; }

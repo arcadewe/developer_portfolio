@@ -1,0 +1,16 @@
+:host { display: block; }
+
+.page { background: var(--color-sky); display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; padding: 5rem 1.5rem 0; position: relative; }
+.page-header, .page-content { margin: 0 auto; max-width: 60rem; width: 100%; }
+.back-link { display: inline-block; font-size: 0.8rem; padding: 0.4rem 0; text-decoration: none; }
+.back-link:hover, .back-link:focus-visible { color: var(--color-gold); outline: none; }
+.back-link:focus-visible { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; }
+.page-title { font-size: 2rem; line-height: 1.3; margin: 1.5rem 0 2rem; text-shadow: var(--text-outline-lg); }
+.page-content { flex: 1; padding-bottom: 3rem; }
+.page-floor { background: var(--floor-sprite) left top / 32px 32px repeat; height: 96px; image-rendering: pixelated; margin: 0 -1.5rem; }
+
+@media (max-width: 600px) {
+  .page { padding-top: 4rem; }
+  .page-title { font-size: 1.25rem; }
+  .back-link { font-size: 0.65rem; }
+}

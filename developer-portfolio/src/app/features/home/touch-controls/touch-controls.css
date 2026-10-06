@@ -1,0 +1,8 @@
+.controls { bottom: 1rem; display: none; justify-content: space-between; left: 1rem; pointer-events: none; position: fixed; right: 1rem; z-index: 6; }
+.controls-group { display: flex; gap: 0.75rem; }
+.control { align-items: center; background: var(--color-overlay); border: 2px solid var(--color-overlay-border); border-radius: 50%; color: rgba(255, 255, 255, 0.85); display: flex; font-size: 1rem; height: 3.25rem; justify-content: center; padding: 0; pointer-events: auto; touch-action: none; user-select: none; -webkit-tap-highlight-color: transparent; width: 3.25rem; }
+.control:active { background: var(--color-overlay-strong); }
+
+@media (hover: none) and (pointer: coarse), (max-width: 800px) {
+  .controls { display: flex; }
+}
