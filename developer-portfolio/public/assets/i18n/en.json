@@ -1,6 +1,6 @@
 {
   "nav": {
-    "knowledge": "Knowledge",
+    "aboutMe": "About me",
     "experience": "Experience",
     "github": "Github",
     "courses": "Courses"
@@ -8,5 +8,147 @@
   "language": {
     "en": "EN",
     "es": "ES"
+  },
+  "page": {
+    "back": "Back to World 1-1"
+  },
+  "aboutMe": {
+    "intro": "Hi! I'm a developer who enjoys building things end to end, from the interface people click on to the servers and networks that keep it running.",
+    "body": "I work across frontend, backend and infrastructure: building web apps with Angular and React, writing APIs with Flask and Node.js, designing databases, and deploying to the cloud with Docker, AWS and Azure. I like solving problems, learning new tools and turning ideas into working software.",
+    "skillsTitle": "Power-ups",
+    "groups": {
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "databases": "Databases",
+      "cloud": "Cloud & DevOps",
+      "tools": "Tools & Systems"
+    }
+  },
+  "audio": {
+    "volume": "Vol"
+  },
+  "experience": {
+    "level": "Level",
+    "items": [
+      {
+        "role": "Full Stack Developer",
+        "company": "Company Name",
+        "period": "2023 - Present",
+        "highlights": [
+          "Built and maintained web applications with Angular and Node.js used by internal and external teams.",
+          "Designed REST APIs and MySQL schemas, improving query performance on high-traffic endpoints.",
+          "Containerized services with Docker and automated deployments to AWS."
+        ],
+        "stack": [
+          "Angular",
+          "Node.js",
+          "MySQL",
+          "Docker",
+          "AWS"
+        ]
+      },
+      {
+        "role": "Backend Developer",
+        "company": "Company Name",
+        "period": "2021 - 2023",
+        "highlights": [
+          "Developed Flask services and background jobs backed by MariaDB.",
+          "Managed Linux servers, Git workflows and code reviews on GitHub.",
+          "Put services behind Cloudflare for caching, DNS and protection."
+        ],
+        "stack": [
+          "Python",
+          "Flask",
+          "MariaDB",
+          "Linux",
+          "Cloudflare"
+        ]
+      },
+      {
+        "role": "IT Support & Networking Intern",
+        "company": "Company Name",
+        "period": "2020 - 2021",
+        "highlights": [
+          "Configured and troubleshot office networks, users and devices.",
+          "Automated repetitive reports and tasks with Visual Basic scripts.",
+          "Helped migrate internal tools and storage to Microsoft Azure."
+        ],
+        "stack": [
+          "Networking",
+          "Azure",
+          "Visual Basic",
+          "Windows"
+        ]
+      }
+    ]
+  },
+  "courses": {
+    "items": [
+      {
+        "title": "AWS Cloud Practitioner",
+        "provider": "Amazon Web Services",
+        "year": "2024",
+        "summary": "Core AWS services, cloud architecture, security and pricing fundamentals.",
+        "topics": [
+          "AWS",
+          "Cloud"
+        ]
+      },
+      {
+        "title": "Azure Fundamentals (AZ-900)",
+        "provider": "Microsoft",
+        "year": "2024",
+        "summary": "Cloud concepts, Azure services, governance and identity basics.",
+        "topics": [
+          "Azure",
+          "Cloud"
+        ]
+      },
+      {
+        "title": "Docker & Containers",
+        "provider": "Udemy",
+        "year": "2023",
+        "summary": "Images, containers, networking, volumes and multi-service apps with Docker Compose.",
+        "topics": [
+          "Docker",
+          "DevOps"
+        ]
+      },
+      {
+        "title": "Angular - The Complete Guide",
+        "provider": "Udemy",
+        "year": "2023",
+        "summary": "Components, signals, routing, forms, HTTP and state management in Angular.",
+        "topics": [
+          "Angular",
+          "TypeScript"
+        ]
+      },
+      {
+        "title": "Introduction to Computer Science",
+        "provider": "Harvard CS50 / edX",
+        "year": "2022",
+        "summary": "Algorithms, data structures and programming in C, Python, SQL and JavaScript.",
+        "topics": [
+          "C",
+          "Python",
+          "SQL"
+        ]
+      },
+      {
+        "title": "Introduction to Networks",
+        "provider": "Cisco Networking Academy",
+        "year": "2021",
+        "summary": "Network fundamentals, IP addressing, switching, routing and basic security.",
+        "topics": [
+          "Networking",
+          "Cisco"
+        ]
+      }
+    ]
+  },
+  "menu": {
+    "toggle": "Open menu",
+    "label": "Site menu"
   }
 }

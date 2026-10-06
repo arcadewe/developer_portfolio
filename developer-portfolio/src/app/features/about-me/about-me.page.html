@@ -1,0 +1,21 @@
+<app-page-shell titleKey="nav.aboutMe">
+  <div class="about-card">
+    <p>{{ 'aboutMe.intro' | translate }}</p>
+    <p>{{ 'aboutMe.body' | translate }}</p>
+  </div>
+
+  <h2 class="skills-title">{{ 'aboutMe.skillsTitle' | translate }}</h2>
+
+  <div class="skill-groups">
+    @for (group of skillGroups; track group.titleKey) {
+      <div class="skill-group">
+        <h3>{{ group.titleKey | translate }}</h3>
+        <ul>
+          @for (skill of group.skills; track skill) {
+            <li>{{ skill }}</li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
+</app-page-shell>

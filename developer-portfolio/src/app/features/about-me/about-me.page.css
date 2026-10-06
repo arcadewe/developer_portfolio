@@ -1,0 +1,15 @@
+.about-card { background: #fff8e7; border: 4px solid #050505; box-shadow: 6px 6px 0 rgba(5, 5, 5, 0.35); font: 1.15rem/1.7 'Space Grotesk', sans-serif; padding: 1.25rem 1.5rem; }
+.about-card p { margin: 0 0 1rem; }
+.about-card p:last-child { margin-bottom: 0; }
+.skills-title { color: #fff; font: 1.1rem 'Press Start 2P', monospace; margin: 2.5rem 0 1.25rem; text-shadow: 2px 0 #050505, -2px 0 #050505, 0 2px #050505, 0 -2px #050505, 2px 2px #050505, -2px 2px #050505, 2px -2px #050505, -2px -2px #050505; text-transform: uppercase; }
+.skill-groups { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.skill-group { background: #c84c0c; border: 4px solid #050505; box-shadow: 6px 6px 0 rgba(5, 5, 5, 0.35); padding: 1rem; }
+.skill-group h3 { color: #fcd34d; font: 0.75rem 'Press Start 2P', monospace; margin: 0 0 0.9rem; text-shadow: 2px 2px 0 #050505; text-transform: uppercase; }
+.skill-group ul { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
+.skill-group li { background: #fff8e7; border: 3px solid #050505; font: 600 0.95rem 'Space Grotesk', sans-serif; padding: 0.3rem 0.6rem; }
+
+@media (max-width: 600px) {
+  .about-card { font-size: 1rem; padding: 1rem; }
+  .skills-title { font-size: 0.85rem; }
+  .skill-groups { grid-template-columns: 1fr; }
+}

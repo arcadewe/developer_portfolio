@@ -1,6 +1,6 @@
 {
   "nav": {
-    "knowledge": "Conocimiento",
+    "aboutMe": "Sobre mí",
     "experience": "Experiencia",
     "github": "Github",
     "courses": "Cursos"
@@ -8,5 +8,147 @@
   "language": {
     "en": "EN",
     "es": "ES"
+  },
+  "page": {
+    "back": "Volver al Mundo 1-1"
+  },
+  "aboutMe": {
+    "intro": "¡Hola! Soy desarrollador y me gusta construir cosas de principio a fin, desde la interfaz que usan las personas hasta los servidores y redes que la mantienen funcionando.",
+    "body": "Trabajo en frontend, backend e infraestructura: creo aplicaciones web con Angular y React, desarrollo APIs con Flask y Node.js, diseño bases de datos y despliego en la nube con Docker, AWS y Azure. Me gusta resolver problemas, aprender nuevas herramientas y convertir ideas en software que funciona.",
+    "skillsTitle": "Power-ups",
+    "groups": {
+      "languages": "Lenguajes",
+      "frameworks": "Frameworks",
+      "databases": "Bases de datos",
+      "cloud": "Nube y DevOps",
+      "tools": "Herramientas y sistemas"
+    }
+  },
+  "audio": {
+    "volume": "Vol"
+  },
+  "experience": {
+    "level": "Nivel",
+    "items": [
+      {
+        "role": "Desarrollador Full Stack",
+        "company": "Nombre de la empresa",
+        "period": "2023 - Actualidad",
+        "highlights": [
+          "Desarrollé y mantuve aplicaciones web con Angular y Node.js usadas por equipos internos y externos.",
+          "Diseñé APIs REST y esquemas MySQL, mejorando el rendimiento de los endpoints con más tráfico.",
+          "Empaqueté servicios en contenedores Docker y automaticé despliegues en AWS."
+        ],
+        "stack": [
+          "Angular",
+          "Node.js",
+          "MySQL",
+          "Docker",
+          "AWS"
+        ]
+      },
+      {
+        "role": "Desarrollador Backend",
+        "company": "Nombre de la empresa",
+        "period": "2021 - 2023",
+        "highlights": [
+          "Desarrollé servicios y tareas en segundo plano con Flask y MariaDB.",
+          "Administré servidores Linux, flujos de Git y revisiones de código en GitHub.",
+          "Puse los servicios detrás de Cloudflare para caché, DNS y protección."
+        ],
+        "stack": [
+          "Python",
+          "Flask",
+          "MariaDB",
+          "Linux",
+          "Cloudflare"
+        ]
+      },
+      {
+        "role": "Pasante de Soporte IT y Redes",
+        "company": "Nombre de la empresa",
+        "period": "2020 - 2021",
+        "highlights": [
+          "Configuré y resolví problemas de redes, usuarios y equipos de oficina.",
+          "Automaticé reportes y tareas repetitivas con scripts de Visual Basic.",
+          "Ayudé a migrar herramientas internas y almacenamiento a Microsoft Azure."
+        ],
+        "stack": [
+          "Redes",
+          "Azure",
+          "Visual Basic",
+          "Windows"
+        ]
+      }
+    ]
+  },
+  "courses": {
+    "items": [
+      {
+        "title": "AWS Cloud Practitioner",
+        "provider": "Amazon Web Services",
+        "year": "2024",
+        "summary": "Servicios principales de AWS, arquitectura en la nube, seguridad y precios.",
+        "topics": [
+          "AWS",
+          "Nube"
+        ]
+      },
+      {
+        "title": "Azure Fundamentals (AZ-900)",
+        "provider": "Microsoft",
+        "year": "2024",
+        "summary": "Conceptos de nube, servicios de Azure, gobernanza e identidad.",
+        "topics": [
+          "Azure",
+          "Nube"
+        ]
+      },
+      {
+        "title": "Docker y Contenedores",
+        "provider": "Udemy",
+        "year": "2023",
+        "summary": "Imágenes, contenedores, redes, volúmenes y aplicaciones multi-servicio con Docker Compose.",
+        "topics": [
+          "Docker",
+          "DevOps"
+        ]
+      },
+      {
+        "title": "Angular - La Guía Completa",
+        "provider": "Udemy",
+        "year": "2023",
+        "summary": "Componentes, signals, rutas, formularios, HTTP y manejo de estado en Angular.",
+        "topics": [
+          "Angular",
+          "TypeScript"
+        ]
+      },
+      {
+        "title": "Introducción a las Ciencias de la Computación",
+        "provider": "Harvard CS50 / edX",
+        "year": "2022",
+        "summary": "Algoritmos, estructuras de datos y programación en C, Python, SQL y JavaScript.",
+        "topics": [
+          "C",
+          "Python",
+          "SQL"
+        ]
+      },
+      {
+        "title": "Introducción a las Redes",
+        "provider": "Cisco Networking Academy",
+        "year": "2021",
+        "summary": "Fundamentos de redes, direccionamiento IP, switching, routing y seguridad básica.",
+        "topics": [
+          "Redes",
+          "Cisco"
+        ]
+      }
+    ]
+  },
+  "menu": {
+    "toggle": "Abrir menú",
+    "label": "Menú del sitio"
   }
 }

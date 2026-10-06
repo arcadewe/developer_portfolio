@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { portfolioLinks } from '../../../domain/portfolio-links';
 
 const LANGUAGE_STORAGE_KEY = 'developer-portfolio-lang';
 
@@ -12,7 +11,6 @@ const LANGUAGE_STORAGE_KEY = 'developer-portfolio-lang';
   styleUrl: './navigation.css',
 })
 export class Navigation {
-  protected readonly links = portfolioLinks;
 
   private readonly translate = inject(TranslateService);
   protected readonly currentLang = this.translate.currentLang;

@@ -1,0 +1,19 @@
+<app-page-shell titleKey="nav.courses">
+  <ul class="course-grid">
+    @for (course of asItems(items()); track $index) {
+      <li class="course-card">
+        <div class="course-badge" aria-hidden="true">
+          <img src="/assets/images/sprites/sprite-1-3.png" alt="" />
+        </div>
+        <h2>{{ course.title }}</h2>
+        <p class="provider">{{ course.provider }} · {{ course.year }}</p>
+        <p class="summary">{{ course.summary }}</p>
+        <ul class="tags">
+          @for (tag of course.topics; track tag) {
+            <li>{{ tag }}</li>
+          }
+        </ul>
+      </li>
+    }
+  </ul>
+</app-page-shell>

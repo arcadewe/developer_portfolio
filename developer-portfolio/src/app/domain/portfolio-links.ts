@@ -1,9 +1,9 @@
 export const portfolioLinks = {
-  knowledge: '',
-  experience: '',
-  github: '',
-  courses: '',
-  cv: '',
+  aboutMe: '/about-me',
+  experience: '/experience',
+  github: 'https://github.com/arcadewe',
+  courses: '/courses',
+  cv: '/assets/documents/cv.pdf',
   projects: ['', '', ''],
-  questionBlockUrl: '',
+  questionBlockUrls: ['', '', '', ''],
 } as const;

@@ -1,0 +1,14 @@
+<main class="page">
+  <app-navigation />
+
+  <header class="page-header">
+    <a class="back-link" routerLink="/">&#9664; {{ 'page.back' | translate }}</a>
+    <h1 class="page-title">{{ titleKey() | translate }}</h1>
+  </header>
+
+  <section class="page-content">
+    <ng-content />
+  </section>
+
+  <div class="page-floor" aria-hidden="true"></div>
+</main>
