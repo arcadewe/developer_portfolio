@@ -5,4 +5,5 @@ export const portfolioLinks = {
   courses: '',
   cv: '',
   projects: ['', '', ''],
+  questionBlockUrl: '',
 } as const;

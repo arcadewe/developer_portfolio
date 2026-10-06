@@ -1,8 +1,22 @@
 <main class="world" aria-label="World 1-1 developer portfolio landing page">
   <app-navigation />
 
-  <div class="player" [style.left.%]="playerPosition()" [style.bottom.px]="groundOffsetPx + verticalOffsetPosition()" role="img" aria-label="Moving player character using sprite-38-12">
-    <img [src]="playerSpritePath" alt="" />
+  <div class="player" [style.left.%]="playerPosition()" [style.bottom.px]="groundOffsetPx + verticalOffsetPosition()" role="img" aria-label="Moving player character">
+    <img [src]="playerSpritePath()" alt="" />
+  </div>
+
+  @for (block of levelBlocks; track $index) {
+    <div class="level-block" [style.left.%]="block.leftPercent" [style.bottom.px]="block.bottomPx" aria-hidden="true">
+      <img [attr.src]="block.spriteFile ? spritePath + block.spriteFile : null" alt="" />
+    </div>
+  }
+
+  <div class="pipe" aria-hidden="true">
+    <img [attr.src]="pipeSpriteFile ? spritePath + pipeSpriteFile : null" alt="" />
+  </div>
+
+  <div class="flag" aria-hidden="true">
+    <img [attr.src]="flagSpriteFile ? spritePath + flagSpriteFile : null" alt="" />
   </div>
 
   <div class="floor" aria-hidden="true">
@@ -10,4 +24,8 @@
       <img [src]="floorSpritePath" alt="" />
     }
   </div>
+
+  <audio class="sfx" #backgroundMusic [attr.src]="backgroundMusicFile || null" loop></audio>
+  <audio class="sfx" #jumpSound [attr.src]="jumpSoundFile || null"></audio>
+  <audio class="sfx" #blockHitSound [attr.src]="blockHitSoundFile || null"></audio>
 </main>

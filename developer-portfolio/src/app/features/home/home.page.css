@@ -11,8 +11,15 @@
 .navigation { left: 8.5%; position: absolute; right: 8.5%; top: 3.8rem; z-index: 5; }
 .navigation a { border: 0; box-shadow: none; font: 1.75rem 'Space Grotesk', sans-serif; padding: 1rem 2.2rem; }
 .navigation a:hover, .navigation a:focus-visible { box-shadow: none; transform: none; }
-.player { position: absolute; transform: translateX(-50%); transition: left 130ms linear; z-index: 3; }
-.player img { height: 4.8rem; image-rendering: pixelated; object-fit: contain; width: 3.2rem; }
+.player { position: absolute; transform: translateX(-50%); z-index: 3; }
+.player img { height: 2.4rem; image-rendering: pixelated; object-fit: contain; width: 3.2rem; }
+.level-block { position: absolute; transform: translateX(-50%); z-index: 2; }
+.level-block img { display: block; height: 48px; image-rendering: pixelated; width: 48px; }
+.pipe { bottom: 96px; left: 65%; position: absolute; transform: translateX(-50%); z-index: 2; }
+.pipe img { display: block; height: 96px; image-rendering: pixelated; width: 64px; }
+.flag { bottom: 96px; left: 92%; position: absolute; transform: translateX(-50%); z-index: 2; }
+.flag img { display: block; height: 220px; image-rendering: pixelated; width: 48px; }
+.sfx { display: none; }
 .floor { bottom: 0; display: grid; grid-auto-rows: 32px; grid-template-columns: repeat(auto-fill, 32px); height: 96px; left: 0; overflow: hidden; position: absolute; right: 0; }
 .floor img { display: block; height: 32px; image-rendering: pixelated; width: 32px; }
 
