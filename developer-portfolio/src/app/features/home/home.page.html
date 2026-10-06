@@ -1,6 +1,12 @@
 <main class="world" aria-label="World 1-1 developer portfolio landing page">
   <app-navigation />
 
+  <div class="clouds" aria-hidden="true">
+    @for (cloud of clouds; track $index) {
+      <img class="cloud" [style.left.%]="cloud.leftPercent" [style.top.px]="cloud.topPx" [attr.src]="cloudSpriteFile ? spritePath + cloudSpriteFile : null" alt="" />
+    }
+  </div>
+
   <div class="player" [style.left.%]="playerPosition()" [style.bottom.px]="groundOffsetPx + verticalOffsetPosition()" role="img" aria-label="Moving player character">
     <img [src]="playerSpritePath()" alt="" />
   </div>
@@ -16,7 +22,13 @@
   </div>
 
   <div class="flag" aria-hidden="true">
-    <img [attr.src]="flagSpriteFile ? spritePath + flagSpriteFile : null" alt="" />
+    <img class="flag-bottom" [attr.src]="flagBottomSpriteFile ? spritePath + flagBottomSpriteFile : null" alt="" />
+    <img class="flag-pole flag-pole-one" [attr.src]="flagPoleSpriteFile ? spritePath + flagPoleSpriteFile : null" alt="" />
+    <img class="flag-pole flag-pole-two" [attr.src]="flagPoleSpriteFile ? spritePath + flagPoleSpriteFile : null" alt="" />
+    <img class="flag-pole flag-pole-three" [attr.src]="flagPoleSpriteFile ? spritePath + flagPoleSpriteFile : null" alt="" />
+    <img class="flag-pole flag-pole-four" [attr.src]="flagPoleSpriteFile ? spritePath + flagPoleSpriteFile : null" alt="" />
+    <img class="flag-top" [attr.src]="flagTopSpriteFile ? spritePath + flagTopSpriteFile : null" alt="" />
+    <img class="flag-flag" [attr.src]="flagFlagSpriteFile ? spritePath + flagFlagSpriteFile : null" alt="" />
   </div>
 
   <div class="floor" aria-hidden="true">

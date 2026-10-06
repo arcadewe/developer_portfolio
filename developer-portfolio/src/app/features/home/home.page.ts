@@ -13,6 +13,11 @@ interface LevelBlock {
   readonly spriteFile: string;
 }
 
+interface Cloud {
+  readonly leftPercent: number;
+  readonly topPx: number;
+}
+
 @Component({
   selector: 'app-home-page',
   standalone: true,
@@ -37,7 +42,12 @@ export class HomePage implements OnInit, OnDestroy {
   protected readonly brickBlockSpriteFile = 'sprite-1-2.png';
   protected readonly questionBlockSpriteFile = 'sprite-1-3.png';
   protected readonly pipeSpriteFile = '';
-  protected readonly flagSpriteFile = '';
+  protected readonly cloudSpriteFile = 'sprite-23-39.png';
+  protected readonly clouds: readonly Cloud[] = this.createClouds();
+  protected readonly flagBottomSpriteFile = 'sprite-36-37.png';
+  protected readonly flagPoleSpriteFile = 'sprite-36-36.png';
+  protected readonly flagTopSpriteFile = 'sprite-36-35.png';
+  protected readonly flagFlagSpriteFile = 'sprite-36-34.png';
 
   protected readonly backgroundMusicFile = '';
   protected readonly jumpSoundFile = '';
@@ -244,6 +254,15 @@ export class HomePage implements OnInit, OnDestroy {
 
   private createWalkFrames(start: number, end: number): readonly string[] {
     return Array.from({ length: end - start + 1 }, (_, index) => `sprite-${start + index}.png`);
+  }
+
+  private createClouds(): readonly Cloud[] {
+    return [
+      { leftPercent: 14, topPx: 0 },
+      { leftPercent: 38, topPx: 28 },
+      { leftPercent: 62, topPx: 10 },
+      { leftPercent: 86, topPx: 34 },
+    ];
   }
 
   private createLevelBlocks(): readonly LevelBlock[] {

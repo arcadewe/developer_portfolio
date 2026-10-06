@@ -1,6 +1,10 @@
 <nav class="navigation" aria-label="Primary navigation">
-  <a [href]="links.knowledge || '#'">Knowledge</a>
-  <a [href]="links.experience || '#'">Experience</a>
-  <a [href]="links.github || '#'">Github</a>
-  <a [href]="links.courses || '#'">Courses</a>
+  <a [href]="links.knowledge || '#'">{{ 'nav.knowledge' | translate }}</a>
+  <a [href]="links.experience || '#'">{{ 'nav.experience' | translate }}</a>
+  <a [href]="links.github || '#'">{{ 'nav.github' | translate }}</a>
+  <a [href]="links.courses || '#'">{{ 'nav.courses' | translate }}</a>
+  <div class="language-switch" role="group" aria-label="Language">
+    <button type="button" [class.active]="currentLang() === 'en'" (click)="setLanguage('en')">{{ 'language.en' | translate }}</button>
+    <button type="button" [class.active]="currentLang() === 'es'" (click)="setLanguage('es')">{{ 'language.es' | translate }}</button>
+  </div>
 </nav>

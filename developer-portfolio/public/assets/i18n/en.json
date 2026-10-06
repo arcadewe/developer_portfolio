@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "knowledge": "Knowledge",
+    "experience": "Experience",
+    "github": "Github",
+    "courses": "Courses"
+  },
+  "language": {
+    "en": "EN",
+    "es": "ES"
+  }
+}
