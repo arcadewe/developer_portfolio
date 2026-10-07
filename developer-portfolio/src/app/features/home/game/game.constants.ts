@@ -29,6 +29,7 @@ export const FLAG_HITBOXES = {
   pole: { left: -4, right: 4, bottom: 48, top: 240 },
   top: { left: -12, right: 12, bottom: 240, top: 270 },
   cloth: { left: 2, right: 50, bottom: 192, top: 240 },
+  bottom: { left: -16, right: 4, bottom: 0, top: 48 },
 } as const;
 
 export const FLAG_CONTACT_MARGIN_PX = 2;
